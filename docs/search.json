@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Vancouver Canopy Priority Index",
+    "section": "",
+    "text": "LST (Mean) pal_lst &lt;- colorNumeric(“inferno”, domain = nbhd$LST_mean, na.color = “transparent”)\nleaflet(nbhd) |&gt; addProviderTiles(providers$CartoDB.Positron) |&gt; addPolygons( fillColor = ~pal_lst(LST_mean), fillOpacity = 0.75, color = “black”, weight = 0.35, label = ~paste0(“”, Name, “LST mean:”, round(LST_mean, 2)), highlightOptions = highlightOptions(weight = 2, color = “white”, bringToFront = TRUE) ) |&gt; addLegend(pal = pal_lst, values = ~LST_mean, title = “LST mean”)\n\nNDVI (Mean) pal_ndvi &lt;- colorNumeric(“YlGn”, domain = nbhd$NDVI_mean, na.color = “transparent”)\nleaflet(nbhd) |&gt; addProviderTiles(providers$CartoDB.Positron) |&gt; addPolygons( fillColor = ~pal_ndvi(NDVI_mean), fillOpacity = 0.75, color = “black”, weight = 0.35, label = ~paste0(“”, Name, “NDVI mean:”, round(NDVI_mean, 3)), highlightOptions = highlightOptions(weight = 2, color = “white”, bringToFront = TRUE) ) |&gt; addLegend(pal = pal_ndvi, values = ~NDVI_mean, title = “NDVI mean”)\n\n\n\n\nNDBI (Mean) pal_ndbi &lt;- colorNumeric(“RdYlBu”, domain = nbhd$NDBI_mean, reverse = TRUE, na.color = “transparent”)\nleaflet(nbhd) |&gt; addProviderTiles(providers$CartoDB.Positron) |&gt; addPolygons( fillColor = ~pal_ndbi(NDBI_mean), fillOpacity = 0.75, color = “black”, weight = 0.35, label = ~paste0(“”, Name, “NDBI mean:”, round(NDBI_mean, 3)), highlightOptions = highlightOptions(weight = 2, color = “white”, bringToFront = TRUE) ) |&gt; addLegend(pal = pal_ndbi, values = ~NDBI_mean, title = “NDBI mean”)\n\nCPI (Class) pal_cpi &lt;- colorFactor( palette = c(“High” = “#d73027”, “Medium” = “#fee08b”, “Low” = “#1a9850”), domain = nbhd$CPI_class )\nleaflet(nbhd) |&gt; addProviderTiles(providers$CartoDB.Positron) |&gt; addPolygons( fillColor = ~pal_cpi(CPI_class), fillOpacity = 0.75, color = “black”, weight = 0.35, label = ~paste0( “”, Name, “”, “CPI:”, round(CPI, 3), “”, “Class:”, CPI_class ), highlightOptions = highlightOptions(weight = 2, color = “white”, bringToFront = TRUE) ) |&gt; addLegend(pal = pal_cpi, values = ~CPI_class, title = “CPI class”)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]
